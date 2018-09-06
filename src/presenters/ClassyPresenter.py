@@ -131,7 +131,8 @@ class ClassyPresenter(object):
 			lines = file.readlines()[int(fn.bodyStart)-1:int(fn.bodyEnd)]
 			file.close()
 
-			returnString += "\n"
+			if (len(lines) > 0):
+				returnString += "\n"
 			# Use of utf-8 to allow all characters used in the documentation to be displayed
 			for line in lines:
 				returnString += u"        # {0}".format(line.decode('utf-8'))

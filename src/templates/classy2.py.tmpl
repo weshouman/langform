@@ -4,20 +4,29 @@ class {{presenter.cl.name}}({{presenter.parentNamesWithCommas}}):
     {{presenter.get_class_description(presenter.cl)}}
 
     def __init__({{presenter.initVariableNamesWithCommas}}):
-      {%- if ((presenter.variables() | length) == 0) %}
+      {% if ((presenter.variables() | length) == 0) %}
         pass
-      {%- endif %}
-      {%- for variable in presenter.variables() %}    
+      {% endif %}
+      {% for variable in presenter.variables() %}
         self.{{variable.name}} = {{variable.name}}
-      {%- endfor %}
+      {% endfor %}
 
   {% for function in presenter.functions() -%}
+    {% if function.static == True %}
     {{ presenter.get_static_decoration(function) }}
+    {% endif %}
     def {{function.name}}({{presenter.get_args(function)}}):
-        {{-presenter.get_description(function)}}
+      {% if presenter.exists_function_description(function) %}
+        {{-presenter.get_function_description(function)}}
+      {% endif %}
+      {% if presenter.exists_reimplementers(function) %}
         {{-presenter.get_reimplementers(function)}}
+      {% endif %}
+      {% if presenter.exists_original_implementation(function) %}
         {{-presenter.get_original_implementation(function)}}
-        # Not implemented
+      {% endif %}
+        # TODO: implement
         pass
+
    {#newline#}
-  {%- endfor %}
+  {% endfor %}
