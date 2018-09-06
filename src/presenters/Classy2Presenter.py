@@ -9,6 +9,7 @@ class Classy2Presenter(ClassyPresenter):
 		super(Classy2Presenter, self).__init__(cl)
 		self.initVariableNamesWithCommas = self.get_init_variable_names_with_commas()
 		self.generateConstructors = False
+		self.generateOriginalImplementation = True
 
 	def exists_constructor_params(self):
 		constructors = filter(lambda x: (x.isConstructor == True and x.isCopyConstructor == False), self.cl.functions)
