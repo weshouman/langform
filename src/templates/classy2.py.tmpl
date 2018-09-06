@@ -4,6 +4,9 @@ class {{presenter.cl.name}}({{presenter.parentNamesWithCommas}}):
     {{presenter.get_class_description(presenter.cl)}}
 
     def __init__({{presenter.initVariableNamesWithCommas}}):
+      {% if presenter.exists_constructor_params() %}
+        {{presenter.get_constructor_params()}}
+      {% endif %}
       {% if ((presenter.variables() | length) == 0) %}
         pass
       {% endif %}

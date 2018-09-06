@@ -8,6 +8,27 @@ class Classy2Presenter(ClassyPresenter):
 	def __init__(self, cl):
 		super(Classy2Presenter, self).__init__(cl)
 		self.initVariableNamesWithCommas = self.get_init_variable_names_with_commas()
+		self.generateConstructors = False
+
+	def exists_constructor_params(self):
+		constructors = filter(lambda x: (x.isConstructor == True and x.isCopyConstructor == False), self.cl.functions)
+
+		for constructor in constructors:
+			if len(constructor.params) > 0:
+				return True
+
+		return False
+
+	def get_constructor_params(self):
+		constructors = filter(lambda x: (x.isConstructor == True and x.isCopyConstructor == False), self.cl.functions)
+
+		constructorParamList = []
+		for constructor in constructors:
+			for param in constructor.params:
+				constructorParamList.append(str(param.name) + ":"+ str(param.type))
+
+		# use set to remove duplicates if found
+		return "# Constructor Params[name:type]: [" + ", ".join(set(constructorParamList)) +"]"
 
 	# TODO: skip generating constructors
 	def get_init_variable_names_with_commas(self):
