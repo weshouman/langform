@@ -71,12 +71,12 @@ def get_members_of_class_node(classNode):
 				mParam = Param(index, mParamName, mParamType)
 				mParamList.append(mParam)
 
- 			member = Member(mId, mName, mKind, mType, mParamList,
- 							mSectionKind, mInline, mStatic, mExplicit, mVirtuality, mProt,
- 							mBriefDesc, mDetailedDesc, mInbodyDesc,
- 							mHeadFile, mHeadLine, mBodyFile, mBodyStart, mBodyEnd,
- 							mReimplementerIds,
- 							mIsConstructor, mIsCopyConstructor, mIsDestructor)
+			member = Member(mId, mName, mKind, mType, mParamList,
+							mSectionKind, mInline, mStatic, mExplicit, mVirtuality, mProt,
+							mBriefDesc, mDetailedDesc, mInbodyDesc,
+							mHeadFile, mHeadLine, mBodyFile, mBodyStart, mBodyEnd,
+							mReimplementerIds,
+							mIsConstructor, mIsCopyConstructor, mIsDestructor)
 			memberList.append(member)
 
 	return memberList

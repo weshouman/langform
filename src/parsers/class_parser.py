@@ -268,7 +268,7 @@ def is_member_copy_constructor(classRefid, paramNode):
 		else:
 			isCopyConstructor = False
 
-	return isCopyConstructor	
+	return isCopyConstructor
 
 
 ###################################

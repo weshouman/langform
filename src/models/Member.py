@@ -18,10 +18,10 @@ class Member:
 		self.inbodyDesc 	= inbodyDesc
 		self.headFile 		= headFile
 		self.headLine 		= headLine
- 		# bodyFile is usually empty if pure virtual
- 		self.bodyFile 		= bodyFile
- 		self.bodyStart 		= bodyStart
- 		self.bodyEnd 		= bodyEnd
+		# bodyFile is usually empty if pure virtual
+		self.bodyFile 		= bodyFile
+		self.bodyStart 		= bodyStart
+		self.bodyEnd 		= bodyEnd
 		self.reimplementers	= reimplementers
 		self.isConstructor	= isConstructor
 		self.isCopyConstructor	= isCopyConstructor

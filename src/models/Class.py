@@ -28,7 +28,7 @@ class Class:
 		return None
 
 	def __str__(self):
-		returnString = "class: {" 
+		returnString = "class: {"
 		returnString += "id: {0}, ".format(str(self.id))
 		returnString += "name: {0}, ".format(str(self.name))
 
@@ -82,3 +82,7 @@ class Class:
 		returnString += "}"
 
 		return returnString
+
+	def get_constructor_variable_names_with_commas(self):
+		# Stub
+		return ""

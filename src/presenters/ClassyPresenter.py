@@ -1,6 +1,6 @@
 import re
 
-class ClassyPresenter:
+class ClassyPresenter(object):
 
 	def __init__(self, cl=None):
 		self.cl = cl

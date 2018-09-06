@@ -1,13 +1,13 @@
 # file created at {{ now() }}
 
 class {{presenter.cl.name}}({{presenter.parentNamesWithCommas}}):
-	{{presenter.get_class_description(presenter.cl)}}
+    {{presenter.get_class_description(presenter.cl)}}
 
-    def __init__(self{{presenter.variableNamesWithCommas}}):
+    def __init__({{presenter.initVariableNamesWithCommas}}):
       {%- if ((presenter.variables() | length) == 0) %}
         pass
       {%- endif %}
-      {%- for variable in presenter.variables() %}
+      {%- for variable in presenter.variables() %}    
         self.{{variable.name}} = {{variable.name}}
       {%- endfor %}
 
@@ -16,7 +16,7 @@ class {{presenter.cl.name}}({{presenter.parentNamesWithCommas}}):
     def {{function.name}}({{presenter.get_args(function)}}):
         {{-presenter.get_description(function)}}
         {{-presenter.get_reimplementers(function)}}
-        {{-presenter.get_original_implementation(function)}} 
+        {{-presenter.get_original_implementation(function)}}
         # Not implemented
         pass
    {#newline#}
