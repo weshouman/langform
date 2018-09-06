@@ -8,10 +8,11 @@ VERBOSE = False
 classXMLDir = r'/home/walid/shared_on_wifi/xml/'
 # classXMLDir = None
 
+# use to debug enters in the detailedDescription
+# classXML = r'/home/walid/shared_on_wifi/xml/classAbstractHistory.xml'
 classXML = r'/home/walid/shared_on_wifi/classEntry.xml'
 
 OUTPUT_DIR = "generated/"
-
 
 # HINT: keep empty if both are the same
 # OLD_SOURCE_DIR is the original source used for Doxigen xml generation
