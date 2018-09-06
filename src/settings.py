@@ -5,8 +5,8 @@ from models.Language import Language
 VERBOSE = False
 
 # classXMLDir has more precedence over classXML
-# classXMLDir = r'/home/walid/shared_on_wifi/xml/'
-classXMLDir = None
+classXMLDir = r'/home/walid/shared_on_wifi/xml/'
+# classXMLDir = None
 
 classXML = r'/home/walid/shared_on_wifi/classEntry.xml'
 
@@ -24,7 +24,7 @@ NEW_SOURCE_DIR = "/home/walid/Documents/tagainijisho/master/"
 OUTPUT_LANGUAGE = Language.PYTHON
 
 debug_dict = {
-"DISPLAY_UNMATCHING_TYPES" : True
+"DISPLAY_UNMATCHING_TYPES" : False
 }
 
 # now DEBUG.key could be used directly

@@ -5,8 +5,10 @@ from models.Language import Language
 
 CPPToPythonTypeDefaultMap =	{
   ".*int.*": "0",
+  ".*bool.*": "False",
   ".*Set.*": "[]",
   ".*List.*": "[]",
+  ".*Map.*": "{}",
   ".*String": "\"\"",
   ".*DateTime": "datetime.min"
 }
