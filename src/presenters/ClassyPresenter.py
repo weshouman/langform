@@ -164,18 +164,18 @@ class ClassyPresenter(object):
 
 		tempString = ""
 		for briefDesc in cl.briefDesc:
-			tempString += "    {0}\n".format(briefDesc)
+			tempString += "        {0}\n".format(briefDesc)
 
 		for detailedDesc in cl.detailedDesc:
-			tempString += "    {0}\n".format(detailedDesc)
+			tempString += "        {0}\n".format(detailedDesc)
 
 		for inbodyDesc in cl.inbodyDesc:
-			tempString += "    {0}\n".format(inbodyDesc)
+			tempString += "        {0}\n".format(inbodyDesc)
 
 		if tempString == None or tempString == "":
 			returnString += " \"\"\""
 		else:
-			returnString += "\n    "
+			returnString += "\n"
 			returnString += tempString
 			returnString += "    \"\"\""
 
