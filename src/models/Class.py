@@ -4,7 +4,7 @@ class Class:
 	def __init__(self, id="", name="", variables=[], functions=[], signals=[], parents=[], children=[], briefDesc=[], detailedDesc=[], inbodyDesc=[]):
 		self.id		= id
 
-		self.name 	= name
+		self.name 	= name.replace("::", "__ns__")
 
 		self.variables 	= variables
 		self.functions 	= functions
