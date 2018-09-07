@@ -1,7 +1,7 @@
 from dotmap import DotMap
 
-# from models.Language import PYTHON
-from models.Language import Language
+# from lib.Language import PYTHON
+from lib.Language import Language
 VERBOSE = False
 
 # classXMLDir has more precedence over classXML
@@ -20,6 +20,11 @@ OLD_SOURCE_DIR = "/home/walid/Documents/tests/tagaini/tagainijisho_doc_py3/"
 
 # NEW_SOURCE_DIR is the current source
 NEW_SOURCE_DIR = "/home/walid/Documents/tagainijisho/master/"
+
+# We replace the "::" found in the class name saved in doxygen with NAMESPACE_PLACEHOLDER
+# which should be a character that's usable for a python class name
+# set to None or "" to disable the feature
+NAMESPACE_PLACEHOLDER = "__ns__"
 
 # language we generate to
 OUTPUT_LANGUAGE = Language.PYTHON

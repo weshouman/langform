@@ -1,7 +1,7 @@
 import re
 from presenters.ClassyPresenter import ClassyPresenter
 from models.pyt import PythonTypeDefault as ptd
-from models.Language import Language
+from lib.Language import Language
 
 class Classy2Presenter(ClassyPresenter):
 

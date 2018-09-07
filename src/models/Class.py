@@ -1,10 +1,14 @@
+
+import settings
+
 class Class:
 	""" Class class. """
 
 	def __init__(self, id="", name="", variables=[], functions=[], signals=[], parents=[], children=[], briefDesc=[], detailedDesc=[], inbodyDesc=[]):
 		self.id		= id
 
-		self.name 	= name.replace("::", "__ns__")
+		ns_ph = settings.NAMESPACE_PLACEHOLDER
+		self.name 	= name.replace("::", ns_ph) if (ns_ph != None and ns_ph != "") else name
 
 		self.variables 	= variables
 		self.functions 	= functions

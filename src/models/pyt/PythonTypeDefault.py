@@ -1,7 +1,7 @@
 import re
 import settings
 
-from models.Language import Language
+from lib.Language import Language
 
 CPPToPythonTypeDefaultMap =	{
   ".*int.*": "0",

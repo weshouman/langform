@@ -7,7 +7,7 @@ from presenters.ClassyPresenter import ClassyPresenter
 from presenters.Classy2Presenter import Classy2Presenter
 
 # import languages
-from models.Language import Language
+from lib.Language import Language
 
 import creator
 import template_process
