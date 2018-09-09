@@ -142,7 +142,7 @@ def create():
 		classLists = []
 		for (dirpath, dirnames, filenames) in os.walk(settings.classXMLDir):
 			for filename in filenames:
-				if filename.endswith(".xml") and filename.startswith("class"):
+				if filename.startswith("class") and filename.endswith(".xml"):
 					print "processing file: " + filename
 					classList = create_class_list(os.path.join(dirpath, filename))
 					classLists.extend(classList)
