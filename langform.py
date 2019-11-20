@@ -34,9 +34,8 @@ def main():
 	# Get arguments
 	args = get_args()
 
-
 	if args.isGUI is True:
-		print "--------------"
+		print("--------------")
 		# allow overwrite of parameters by zmq
 		gsettings.modify_settings_by_gui()
 

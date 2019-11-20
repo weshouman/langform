@@ -30,7 +30,7 @@ def get_members_of_class_node(classNode):
 			mName 			  = parser.get_memberdef_name(memberNode)
 
 			if (VERBOSE):
-				print "processing member: " + mName
+				print("processing member: " + mName)
 
 			mId 			  = parser.get_memberdef_id(memberNode)
 			mKind 			  = parser.get_memberdef_kind(memberNode)
@@ -92,7 +92,7 @@ def create_class_list(classXML):
 		className = parser.get_class_name(classNode)
 
 		if (VERBOSE):
-			print "processing class: " + className
+			print("processing class: " + className)
 
 		cBriefDesc 		  = parser.get_class_brief_desc(classNode)
 		cDetailedDesc 	  = parser.get_class_detailed_desc(classNode)
@@ -109,7 +109,7 @@ def create_class_list(classXML):
 			pName = parser.get_parent_name(parentNode)
 
 			if (VERBOSE):
-				print "processing parent: " + pName
+				print("processing parent: " + pName)
 
 			# pId = parser.get_parent_id(parentNode)
 
@@ -122,7 +122,7 @@ def create_class_list(classXML):
 			cName = parser.get_child_name(childNode)
 
 			if (VERBOSE):
-				print "processing child: " + cName
+				print("processing child: " + cName)
 
 			# cId = parser.get_child_id(childNode)
 
@@ -143,7 +143,7 @@ def create():
 		for (dirpath, dirnames, filenames) in os.walk(settings.classXMLDir):
 			for filename in filenames:
 				if filename.startswith("class") and filename.endswith(".xml"):
-					print "processing file: " + filename
+					print("processing file: " + filename)
 					classList = create_class_list(os.path.join(dirpath, filename))
 					classLists.extend(classList)
 
@@ -153,8 +153,8 @@ def create():
 		classList = create_class_list(settings.classXML)
 
 	if (VERBOSE):
-		print "----"
+		print("----")
 		for c in classList:
-			print c
+			print(c)
 
 	return [classList]

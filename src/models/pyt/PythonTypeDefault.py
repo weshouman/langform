@@ -32,7 +32,7 @@ def get_python_type_default(language, param_type):
 
 	if keyMatched == False:
 		if settings.DEBUG.DISPLAY_UNMATCHING_TYPES:
-			print "No default value for type: " + param_type
+			print("No default value for type: " + param_type)
 
 	return returnString
 

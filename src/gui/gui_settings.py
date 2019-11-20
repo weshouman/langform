@@ -14,13 +14,13 @@ def modify_settings_by_gui():
 	msg = socket.recv()
 
 	if settings.VERBOSE:
-		print "Received message is: " + msg
+		print("Received message is: " + msg)
 
 	# parse json
 	parsedMsg = sjson.loads(msg)
 
 	if settings.VERBOSE:
-		print "Parsed message is: " + parsedMsg
+		print("Parsed message is: " + parsedMsg)
 
 	parsedMsgMap = DotMap(parsedMsg)
 	parsedSettings = parsedMsgMap.settings
@@ -33,7 +33,7 @@ def modify_settings_by_gui():
 			#       and use ```if parsedSetting in settings:``` directly
 			settings.classXMLDir = parsedSettings.classXMLDir
 			result = 'Value of {0} is set to {1}!'.format(parsedSetting, settings.classXMLDir)
-			print result
+			print(result)
 			socket.send(result)
 
 	socket.close()
